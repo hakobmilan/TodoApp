@@ -1,7 +1,7 @@
 import React from 'react'
 import './Todo.css'
 
-function Todo({ curId, setCurId, toDelete, setToDelete, isPop, setIsPop, todo, toggleTodo, className, onDelete }) {
+function Todo({ curId, setCurId, isPop, setIsPop, todo, toggleTodo, className }) {
 
   function handleClick() {
     toggleTodo(todo.id)

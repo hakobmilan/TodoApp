@@ -11,7 +11,6 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [isActive, setIsActive] = useState(false);
   const [isPop, setIsPop] = useState(false);
-  const [toDelete, setToDelete] = useState(false);
   const [curId, setCurId] = useState(-1);
 
 
@@ -48,13 +47,11 @@ function App() {
         todos={todos} setTodos={setTodos} />
 
       {todos.length === 0 ? <div className='main' > <p className='p1'>Your life is blank page. You write on it.</p> <h1 className="h1">So start by adding  your tasks here.</h1> </div> : null}
-      {isPop && <Popup curId={curId} onDelete={onDelete} toDelete={toDelete} setToDelete={setToDelete} isPop={isPop} setIsPop={setIsPop} />}
+      {isPop && <Popup curId={curId} onDelete={onDelete} isPop={isPop} setIsPop={setIsPop} />}
       <TodoList
 
         curId={curId}
         setCurId={setCurId}
-        toDelete={toDelete}
-        setToDelete={setToDelete}
         todos={todos} toggleTodo={toggleTodo} isActive={isActive} setIsActive={setIsActive} isPop={isPop} setIsPop={setIsPop} />
     </div>
   );
